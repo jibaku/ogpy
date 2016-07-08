@@ -45,3 +45,7 @@ class OpenGraph(object):
         for og in ogs:
             if og.has_attr('content'):
                 self.__data__[og['property'][3:]] = og['content']
+
+    @property
+    def data(self):
+        return self.__data__
