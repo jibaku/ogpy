@@ -4,6 +4,7 @@ from __future__ import absolute_import, unicode_literals
 import re
 
 import requests
+
 from bs4 import BeautifulSoup
 
 
@@ -30,6 +31,7 @@ class OpenGraph(object):
         return self.__repr__()
 
     def _fetch(self, url):
+        """Fetch the given url with requests and return the page text."""
         headers = {}
         if self.useragent:
             headers = {
@@ -39,6 +41,7 @@ class OpenGraph(object):
         return response.text
 
     def _parse(self, html):
+        """Parse given HTML document and populate the self.__data__ dict."""
         doc = BeautifulSoup(html, 'html.parser')
         ogs = doc.html.head.findAll(property=re.compile(r'^og'))
 
