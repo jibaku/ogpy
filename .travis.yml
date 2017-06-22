@@ -13,8 +13,8 @@ install:
     - pip install flake8 isort pep8-naming coverage coveralls
 
 before_script:
-    - chmod -R +x ./bin
-    - ./bin/isort.sh
+    # - chmod -R +x ./bin
+    # - ./bin/isort.sh
     - flake8 --max-complexity 10 opengraph
 
 script:
