@@ -11,10 +11,10 @@ install_requires = ['beautifulsoup4>=4.3', 'requests>=2.7']
 test_require = install_requires + ['coverage>=3.7', 'nose>=1.3', 'responses']
 
 setup(
-    name='python-opengraph',
+    name='ogpy',
     version=__versionstr__,
     description='Python module to parse Open Graph metadata on web pages',
-    url='https://github.com/HenrikOssipoff/python-opengraph',
+    url='https://github.com/jibaku/ogpy',
     license='MIT',
     author='Henrik Ossipoff Hansen',
     author_email='henrik.ossipoff@gmail.com',
@@ -32,6 +32,8 @@ setup(
         'Programming Language :: Python :: 3',
         'Programming Language :: Python :: 3.3',
         'Programming Language :: Python :: 3.4',
+        'Programming Language :: Python :: 3.5',
+        'Programming Language :: Python :: 3.6',
         'Programming Language :: Python :: Implementation :: PyPy'
     ],
     keywords='opengraph')
