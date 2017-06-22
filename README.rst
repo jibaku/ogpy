@@ -1,5 +1,5 @@
-.. image:: https://travis-ci.org/HenrikOssipoff/python-opengraph.svg?branch=master
-    :target: https://travis-ci.org/HenrikOssipoff/python-opengraph
+.. image:: https://travis-ci.org/jibaku/ogpy.svg?branch=master
+    :target: https://travis-ci.org/jibaku/ogpy
 .. image:: https://coveralls.io/repos/HenrikOssipoff/python-opengraph/badge.svg?branch=master
   :target: https://coveralls.io/r/HenrikOssipoff/python-opengraph?branch=master
 
@@ -10,7 +10,7 @@ Python module to parse Open Graph metadata on web pages. For more information on
 Compatability
 =============
 - Python 2.7
-- Python 3.3, 3.4
+- Python 3.3, 3.4, 3.5, 3.6
 - PyPy
 
 Other versions may work, but testing is only done against the above versions.
@@ -24,7 +24,7 @@ Installation
 ============
 .. code:: python
 
-    pip install python-opengraph
+    pip install ogpy
 
 Example loading from URL
 ========================
