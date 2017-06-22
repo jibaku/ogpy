@@ -8,12 +8,9 @@ from bs4 import BeautifulSoup
 
 
 class OpenGraph(object):
-    useragent = None
-    __data__ = {}
-
     def __init__(self, url=None, html=None, useragent=None):
-        if useragent:
-            self.useragent = useragent
+        self.useragent = useragent
+        self.__data__ = {}
         content = html or self._fetch(url)
         self._parse(content)
 
@@ -42,9 +39,13 @@ class OpenGraph(object):
         return response.text
 
     def _parse(self, html):
-        doc = BeautifulSoup(html)
+        doc = BeautifulSoup(html, 'html.parser')
         ogs = doc.html.head.findAll(property=re.compile(r'^og'))
 
         for og in ogs:
             if og.has_attr('content'):
                 self.__data__[og['property'][3:]] = og['content']
+
+    @property
+    def data(self):
+        return self.__data__
